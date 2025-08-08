@@ -10,7 +10,7 @@
     "package": "electron-packager . FomoCode --platform=win32 --arch=x64 --out=dist --overwrite --prune=true",
     "lint": "eslint .",
     "preview": "vite preview",
-    "start": "node ./backend/server.cjs"
+    "start": "node ./backend/server.cjs"   
   },
   "dependencies": {
     "axios": "^1.11.0",
