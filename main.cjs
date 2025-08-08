@@ -32,6 +32,12 @@ function createWindow() {
 youtube.stdout.on('data', (data) => console.log('[youtube]', data.toString()));
 youtube.stderr.on('data', (data) => console.error('[youtube ERROR]', data.toString()));
 
+
+// Focus lock process
+  const focus = spawn('node', [path.resolve(__dirname, 'backend/focus-lock.cjs')]);
+  focus.stdout.on('data', (data) => console.log('[focus-lock]', data.toString()));
+  focus.stderr.on('data', (data) => console.error('[focus-lock ERROR]', data.toString()));
+
 }
 
 app.whenReady().then(createWindow);
